@@ -1,0 +1,6 @@
+hadoop fs -conf conf/hadoop-localhost.xml -ls .  - pokazuje katalog dzialajacego serwera HDFS wzgledem pliku konfiguracyjnego
+
+yarn.resourcemanager.max-completed-applications = ilość przechowywanych w pamięci ukończonych aplikacji
+
+
+hadoop fs -getmerge max-temp max-temp-local sort max-temp-local - merguje i kopiuje wszystkie wyniki z plików, które zostały wygenerowane przez reduktory
