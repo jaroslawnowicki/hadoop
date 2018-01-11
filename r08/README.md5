@@ -3,3 +3,11 @@ org.apache.hadoop.mapreduce.package.InputSplit
 mapreduce.mapper.multithrea-dedmapper.threads - liczba maperów ktore mozna uruchomic rownolegle
 mapreduce.input.fileinputformat.input.dir.recursive=true - przetwaraza katalogi rekurencyjnie inaczej exception
 
+mapreduce.input.linerecordreader.line.maxlenght - narzuca długość linii w bajtach w pamięci, mechanim odczytu rekordów pominie taki rekord i nie będzie problemów np. z pamięcią
+
+mapreduce.input.lineinputformat.linespermap - ilość linii wczytywanych do mappera na raz. Gdy uustawimy 1 można wykorzystać do długich obliczen NLineInputFormat
+
+Zamiast DBInputFormat lepiej uzywać Sqoopa, ktory przenosi dane do Hadoopa (HBase)
+
+mapreduce.output.textoutputformat.separator = ustawia separator dla danych wyjsciowych dla klasy TextOutputFormat
+

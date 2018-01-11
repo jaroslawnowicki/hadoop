@@ -9,6 +9,7 @@ import org.apache.hadoop.mapreduce.InputSplit;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.lib.input.FileSplit;
+import org.apache.hadoop.mapreduce.lib.input.MultipleInputs;
 import org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat;
 import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
@@ -48,6 +49,9 @@ public class SmallFilesToSequenceFileConverter extends Configured
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(BytesWritable.class);
         job.setMapperClass(SequenceFileMapper.class);
+
+//        MultipleInputs.addInputPath(); //dodajemy gdy mamy dwa rozne zrodla danych i stosujemy dwa rozne mappery
+//        MultipleInputs.addInputPath();
         return job.waitForCompletion(true) ? 0 : 1;
     }
 
