@@ -1,0 +1,5 @@
+org.apache.hadoop.mapreduce.package.InputSplit
+
+mapreduce.mapper.multithrea-dedmapper.threads - liczba maperów ktore mozna uruchomic rownolegle
+mapreduce.input.fileinputformat.input.dir.recursive=true - przetwaraza katalogi rekurencyjnie inaczej exception
+
